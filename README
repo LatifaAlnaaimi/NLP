@@ -1,0 +1,93 @@
+#NLP Project
+
+#Description
+This project is a web application that analyzes the sentiment of a given URL using the MeaningCloud API.
+It demonstrates front-end and back-end integration with a focus on asynchronous operations, environment 
+configuration, and modular JavaScript. The project uses Webpack for bundling and Jest for testing.
+
+The application allows users to input a URL, validate it, and submit it for sentiment analysis. 
+The results are then displayed dynamically on the page.
+
+#Features
+-URL Validation: Ensures user input is a valid URL before submission.
+-Sentiment Analysis: Processes the submitted URL to fetch sentiment data.
+-Dynamic Content Rendering: Displays analysis results directly on the page.
+-Environment Variables: Uses .env files to store API keys securely.
+-Asynchronous Operations: Fetches data from the MeaningCloud API and handles responses.
+-Bundling with Webpack: Optimizes assets for development and production environments.
+-Testing with Jest: Includes unit tests to ensure functionality.
+
+#Dependencies
+The project relies on the following technologies and libraries:
+
+-Node.js (v16 or higher recommended)
+-Express: Handles server-side logic.
+-dotenv: Manages environment variables.
+-cors: Enables cross-origin requests.
+-node-fetch: Performs API requests.
+-Webpack: Manages project bundling.
+-Jest: Provides a testing framework.
+
+#Installation
+Prerequisites
+Ensure you have the following installed:
+
+-Node.js
+-npm (comes with Node.js)
+
+#Steps
+git clone https://github.com/LatifaAlnaaimi/NLP07.git
+
+Navigate to the project directory:
+    cd NLP07-main
+
+#Install dependencies:
+-npm install
+-Set up your environment variables:
+    Create a .env file in the root directory.
+    Add your MeaningCloud API key in .env file:
+        APPLICATION_KEY= YOUR_API_KEY
+-npm run build-prod (to create dist file)
+-npm start 
+
+#Usage
+Development
+To run the application in development mode:
+    npm run build-dev
+This command will start the Webpack Dev Server and 
+open the application in your default browser.
+
+#Production
+To build and run the application in production mode:
+-Build the project:
+    npm run build-prod
+-Start the server:
+    npm start
+
+#Testing
+Run tests with:
+    npm test
+
+#Project Structure
+├── src
+│   ├── client
+│   │   ├── js
+│   │   │   ├── formHandler.js  # Handles form submission logic.
+│   │   │   ├── urlCheck.js     # Validates URLs.
+│   │   ├── styles
+│   │   │   ├── base.scss       # Base styles.
+│   │   │   ├── header.scss     # Header styles.
+│   │   │   ├── footer.scss     # Footer styles.
+│   │   ├── views
+│   │       ├── index.html      # Main HTML file.
+│   ├── server
+│       ├── index.js            # Server-side logic.
+├── dist                        # Bundled production files.
+├── webpack.dev.js              # Development Webpack configuration.
+├── webpack.prod.js             # Production Webpack configuration.
+├── package.json                # Dependencies and scripts.
+├── .env                        # Environment variables.
+└── README.md                   # Project documentation.
+
+#License
+This project is open-source.
